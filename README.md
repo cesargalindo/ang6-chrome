@@ -1,3 +1,11 @@
+# Load chrome_plugin/ng6-proj as a Chrome extension
+- plugin leverages Chrome APIs: storage, contextMenus, browserAction, runtime, tabs and sendMessage  
+- Angular 6 services, components, routes, Observables, etc.
+- External javascript library
+
+# app is solely used for demonstration purposes as a Chrome plugin
+
+
 # Ng6Proj
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
