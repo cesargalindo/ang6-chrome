@@ -1,0 +1,29 @@
+<h1>Posts</h1>
+
+
+<form [formGroup]="editItemForm">
+		<!-- Color picker (adjusts to element size) -->
+    <label>Select New Color </label>
+    <input type="text" 
+          formControlName="name"
+          (blur)="newColor($event)"
+          class="jscolor"
+          id="karate"><br>
+
+          <div flex="20">
+              <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a mat-raised-button color="primary" (click)="applyFilter()"> SEARCH </a> -->
+          </div>
+  </form>
+
+  <p> Test page: <a href="https://developer.chrome.com/apps/contextMenus" target="_blank">https://developer.chrome.com/apps/contextMenus</a> </p>
+
+<hr />
+
+<ul>
+  <li *ngFor="let post of posts$">
+    <a routerLink="">{{ post.title }}</a>
+
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
+

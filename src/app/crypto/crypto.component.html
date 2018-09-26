@@ -1,0 +1,112 @@
+<h1>Crypto Prices</h1>
+
+    <button mat-raised-button color="primary" (click)="fixBTCPrice()" >Fix BTC Price</button>
+    &nbsp; &nbsp; &nbsp; <span *ngIf="btcPrice">BTC Price is fixed at: {{ btcPrice }}</span>
+
+  <div class="Cryptocurrency" *ngFor="let crypto of cryptos$">
+
+      <div class="Cryptocurrency-header">
+          <span class="icon" id="{{crypto.pair}}"></span>
+          <span> &nbsp; &nbsp; &nbsp; {{ crypto.pair }}  </span>
+            <!-- { !!index && <div className="up" onClick={() => onClick(pair, 'organize')}> -->
+              <!-- <span></span> -->
+          <!-- </div> -->
+      </div>
+
+
+      <div class="Cryptocurrency-body" [ngClass]="{ 'red':priceClass[crypto.pair] === 'red', 'green':priceClass[crypto.pair]=== 'green' }"
+          >USD {{ crypto.last | currency:'USD':'symbol':'1.4-4' }} </div>
+
+      <div class="Cryptocurrency-fooder">Low : {{ crypto.low | currency:'USD':'symbol':'1.4-4' }} | High : {{ crypto.high | currency:'USD':'symbol':'1.4-4' }} </div>
+  </div>
+
+  <!-- <ul>
+      <li *ngFor="let crypto of cryptos$">
+        <p>{{ crypto.pair }} -- {{crypto.last }} </p>
+      </li>
+    </ul> -->
+
+  <!-- <hr />
+  <hr />
+
+  <div class="CryptocurrenciesList">
+
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="BTC"></span>
+        <span> BTC</span>
+      </div>
+      <div class="Cryptocurrency-body">USD $6,420.9000</div>
+      <div class="Cryptocurrency-fooder">Low : $6,348.0000 | High : $6,639.0000</div>
+    </div>
+
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="ETH"></span>
+        <span> ETH</span>
+        <div class="up"><span></span></div>
+      </div>
+      <div class="Cryptocurrency-body green">USD $214.4600</div>
+      <div class="Cryptocurrency-fooder">Low : $202.9700 | High : $234.7900</div>
+    </div>
+
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="BCH"></span>
+        <span> BCH</span>
+        <div class="up"><span></span></div>
+      </div>
+      <div class="Cryptocurrency-body">USD $437.0700</div>
+      <div class="Cryptocurrency-fooder">Low : $425.2700 | High : $470.1500</div>
+    </div>
+
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="BTG"></span>
+        <span> BTG</span>
+        <div class="up">
+          <span></span>
+        </div>
+      </div>
+      <div class="Cryptocurrency-body">USD $21.5200</div>
+      <div class="Cryptocurrency-fooder">Low : $21.0000 | High : $22.2800</div>
+    </div>
+    
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="DASH"></span>
+        <span> DASH</span>
+        <div class="up">
+          <span></span>
+        </div>
+      </div>
+      <div class="Cryptocurrency-body">USD $184.0800</div>
+      <div class="Cryptocurrency-fooder">Low : $180.0000 | High : $197.0500</div>
+    </div>
+    
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="XRP"></span>
+        <span> XRP</span>
+        <div class="up">
+          <span></span>
+        </div>
+      </div>
+      <div class="Cryptocurrency-body">USD $0.4526</div>
+      <div class="Cryptocurrency-fooder">Low : $0.4344 | High : $0.5297</div>
+    </div>
+    
+    <div class="Cryptocurrency">
+      <div class="Cryptocurrency-header">
+        <span class="icon" id="XLM"></span>
+        <span> XLM</span>
+        <div class="up">
+          <span></span>
+        </div>
+      </div>
+      <div class="Cryptocurrency-body">USD $0.2446</div>
+      <div class="Cryptocurrency-fooder">Low : $0.2310 | High : $0.2760</div>
+    </div>
+    
+  </div> -->
+
